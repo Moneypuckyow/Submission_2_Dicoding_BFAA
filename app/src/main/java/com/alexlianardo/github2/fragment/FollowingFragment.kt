@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alexlianardo.github2.R
 import com.alexlianardo.github2.UsersDetailActivity
-import com.alexlianardo.github2.adapter.ListFollowsAdapter
+import com.alexlianardo.github2.adapter.ListUsersAdapter
 import com.alexlianardo.github2.model.Users
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
@@ -25,7 +25,7 @@ class FollowingFragment : Fragment() {
 
     val username = ArrayList<String>()
     private val list = ArrayList<Users>()
-    private lateinit var adapter: ListFollowsAdapter
+    private lateinit var adapter: ListUsersAdapter
 
     companion object {
         private val TAG = FollowingFragment::class.java.simpleName
@@ -34,7 +34,7 @@ class FollowingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = ListFollowsAdapter(list)
+        adapter = ListUsersAdapter(list)
         list.clear()
         val users = activity!!.intent.getParcelableExtra(EXTRA_USERS) as Users?
         getUsersFollowingData(users?.username.toString())
@@ -44,7 +44,7 @@ class FollowingFragment : Fragment() {
 
     private fun showRecyclerList() {
         recycleViewFollowing.layoutManager = LinearLayoutManager (context!!)
-        val listUsersAdapter = ListFollowsAdapter(list)
+        val listUsersAdapter = ListUsersAdapter(list)
         recycleViewFollowing.adapter = listUsersAdapter
     }
 
