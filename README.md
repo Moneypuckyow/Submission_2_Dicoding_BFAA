@@ -12,6 +12,7 @@ karena data JSON API nya bersifat array (https://api.github.com/search/users?q={
 ------
 
 ![image](https://user-images.githubusercontent.com/67593237/115466052-fe392600-a1db-11eb-888f-0af16a77a364.png)
+![device-2021-04-20-135919](https://user-images.githubusercontent.com/67593237/115469230-ba94eb00-a1e0-11eb-955a-6bcfb30254ef.png)
 data username users juga dikirim kan ke function getDetailUsers() untuk mendapatkan data users yang lain seperti data company, location, repository, followers, dan following users melalui (https://api.github.com/users/{username}), yang mana data tersebut bakal digunakan di list recycleview search users.
 
  ------
@@ -24,6 +25,7 @@ untuk bagian recyclerview saya sudah menggunakannya sesuai dengan yang di ajarka
 -------
 
 ![image](https://user-images.githubusercontent.com/67593237/115466493-a5b65880-a1dc-11eb-946d-ee3f700b0b5c.png)
+
 dibagian ListUsersAdapter() data yang ditampilkan di listView adalah data username, name, avatar, followers, dan following users.
 di dalam submission ini saya hanya menggunakan 1 adapter untuk menampilkan data di listView atau recyclerview, sedangkan untuk bagian DetailActivity.kt tidak menggunakan adapter list view kecuali untuk sectionpager.
 
