@@ -77,8 +77,18 @@ class MainActivity : AppCompatActivity() {
 
     //mengambil data "username" dari user untuk di kirimkan ke UsersDetailActivity dan disimpan di EXTRA_USERS
     private fun showDetailPage(users: Users) {
+        Users(
+            users.username,
+            users.name,
+            users.company,
+            users.location,
+            users.photo,
+            users.repository,
+            users.followers,
+            users.following
+        )
         val moveWithDataIntent = Intent (this, UsersDetailActivity::class.java)
-        moveWithDataIntent.putExtra(UsersDetailActivity.EXTRA_USERS, users.username)
+        moveWithDataIntent.putExtra(UsersDetailActivity.EXTRA_USERS, users)
         this.startActivity(moveWithDataIntent)
     }
 
