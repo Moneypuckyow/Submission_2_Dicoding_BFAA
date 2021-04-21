@@ -27,7 +27,7 @@ untuk bagian recyclerview saya sudah menggunakannya sesuai dengan yang di ajarka
 ![image](https://user-images.githubusercontent.com/67593237/115466493-a5b65880-a1dc-11eb-946d-ee3f700b0b5c.png)
 
 dibagian ListUsersAdapter() data yang ditampilkan di listView adalah data username, name, avatar, followers, dan following users.
-di dalam submission ini saya hanya menggunakan 1 adapter untuk menampilkan data di listView atau recyclerview, sedangkan untuk bagian DetailActivity.kt tidak menggunakan adapter list view kecuali untuk sectionpager.
+di dalam submission ini saya hanya menggunakan 1 adapter untuk menampilkan data di listView atau recyclerview, sedangkan untuk bagian DetailActivity.kt tidak menggunakan adapter list view kecuali untuk sectionpager adapter.
 
 
 ![image](https://user-images.githubusercontent.com/67593237/115466821-13fb1b00-a1dd-11eb-9630-883dc9d675b9.png)
